@@ -1,0 +1,72 @@
+<div class="main-container">
+    <div class="app-sidebar">
+<app-sidebar></app-sidebar>
+</div>
+<div class="app-collapsed-sidebar">
+<app-collapsed-sidebar></app-collapsed-sidebar>
+</div>
+
+<!-- <div class="sidebar-collapsed-container">
+  <div class="sidebar-collapsed-menu active">
+  <p><i class="fa-solid fa-house"></i></p>
+  
+  </div>
+  <div class="sidebar-collapsed-menu">
+      <p><i class="fa-solid fa-video"></i></p>
+      
+  </div>
+  <div class="sidebar-collapsed-menu">
+      <p><i class="fa-solid fa-subscript"></i></p>
+      
+      
+  </div>
+  
+  
+      <div class="sidebar-collapsed-menu">
+          
+          <h3 class="sidebar-list">You ></h3>
+          
+      </div>
+      </div> -->
+<!-- collapsed side bar -->
+    
+    <div class="primary-container">
+        <div class="scroll-btn-button">
+            <div
+          class="left-arrow"
+        (click)="scrollRighthandler()"
+        >
+          <a class="prev text-white  cursor-pointer">&#10094;</a>
+        </div>
+<div class="btn-list" id="btn-items">
+    @for(item of btnArray; track $index){
+        
+        <button >{{item}}</button>
+   
+    }
+</div>
+
+<div
+          class="right-arrow"
+          (click)="scrollLeftthandler()"
+        >
+          <a class="next text-white  cursor-pointer">&#10095;</a>
+        </div>
+
+
+</div>
+
+<div class="video-list">
+    @for(item of userList; track $index){
+        
+      <a [routerLink]="'display-videos/'+item.id"> <div class="video-details" (click)="videoDetailsHandler(item.snippet.title, item.snippet.channelTitle)" >
+<img [src]="item.snippet.thumbnails.medium.url"/>
+<h5>{{item.snippet.title}}</h5>
+<p>{{item.snippet.channelTitle}}</p>
+
+</div></a>
+    }
+    
+</div>
+    </div>
+</div>

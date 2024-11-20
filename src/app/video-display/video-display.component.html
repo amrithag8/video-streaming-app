@@ -1,0 +1,56 @@
+<div class="video-container">
+  <div class="display-video">
+    <iframe
+      
+      [src]="safeUrl"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <p>{{videoTitle}}</p>
+    <p>{{videoChannelTitle}}</p>
+  </div>
+  <div class="video-display-list">
+    <div class="btn-container">
+
+      <div
+      class="left-arrow"
+    (click)="scrollRighthandler()"
+    >
+      <a class="prev text-white  cursor-pointer">&#10094;</a>
+    </div>
+<div class="btn-list" id="btn-items">
+@for(item of arrayVal; track $index){
+    
+    <button >{{item}}</button>
+
+}
+</div>
+
+<div
+      class="right-arrow"
+      (click)="scrollLeftthandler()"
+    >
+      <a class="next text-white  cursor-pointer">&#10095;</a>
+    </div>
+
+
+
+    </div>
+
+    <div class="video-suggestions-list">
+@for(item of allMoviesArray; track $index){
+  <div class="video-suggestion">
+    <img [src]="item.snippet.thumbnails.medium.url"/>
+    <div class="video-title">
+<h5>{{item.snippet.title}}</h5>
+<p>{{item.snippet.channelTitle}}</p>
+    </div>
+  </div>
+}
+    </div>
+  </div>
+</div>

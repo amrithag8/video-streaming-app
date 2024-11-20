@@ -1,0 +1,37 @@
+.sidebar-collapsed-menu i{
+    font-size: 30px;
+}
+
+.sidebar-collapsed-container{
+    display: none;
+    height: 100vh;
+  padding: 20px 0px;
+  overflow-y: scroll;
+  position: fixed;
+  /* width: 13%; */
+}
+
+.sidebar-collapsed-menu{
+    padding: 0px 30px;
+    cursor: pointer;
+    color: gray;
+}
+
+  
+  .sidebar-collapsed-menu.active {
+color: black;
+  }
+
+
+@media(max-width: 1450px){
+.sidebar-collapsed-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+}
+@media(max-width:950px){
+    .sidebar-collapsed-menu{
+padding: 0px 10px;
+    }
+}

@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 150px;
+  height: 40px;
+}
+.header-component {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  margin-bottom: 10px;
+  /* position: fixed;
+  height: 300px; */
+}
+
+.search-tab .inputfield {
+  padding: 10px;
+  /* height: 30px; */
+  max-width: 400px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.search-tab {
+  display: flex;
+  width: 500px;
+}
+
+.search-icon {
+  width: 40px;
+  
+  padding: 5px 0px;
+  border: 2px solid;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+
+.magnifier-icon {
+  width: 30px;
+  height: 25px;
+}
+
+.navigate {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.navigate .create-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.navigate .notification-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.navigate .user-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
